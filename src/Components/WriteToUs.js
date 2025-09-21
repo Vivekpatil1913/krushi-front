@@ -5,6 +5,7 @@ import './WriteToUs.css';
 export default function WriteToUs() {
     const sectionRef = useRef(null);
     const [sent, setSent] = useState(false);
+    const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 
     const [formData, setFormData] = useState({
         name: '',
@@ -160,7 +161,7 @@ export default function WriteToUs() {
                 };
                 
                 const response = await axios.post(
-                    `${API_BASE_URL}/api/messages`,
+                    `${API_BASE_URL}/messages`,
                     payload,
                     { headers: { "Content-Type": "application/json" } }
                 );
