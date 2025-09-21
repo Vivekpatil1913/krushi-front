@@ -11,8 +11,7 @@ import './ProductCard.css';
 import CheckoutFlow from './CheckoutFlow';
 
 // const backendRootURL = 'http://localhost:5000';
-const backendRootURL = process.env.REACT_APP_BASE_URL="https://krushi-backend-7l03.onrender.com"
- || 'http://localhost:5000';
+const backendRootURL = process.env.REACT_APP_BASE_URL || 'http://localhost:5000';
 
 const ProductCard = ({
   product,
