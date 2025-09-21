@@ -14,7 +14,7 @@ import { BsTrophy } from 'react-icons/bs';
 import './ShopPage.css';
 
 // const backendURL = 'http://localhost:5000/api';
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const backendURL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 
 const ShopPage = () => {
   const location = useLocation();
