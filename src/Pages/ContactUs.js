@@ -19,6 +19,8 @@ export default function ContactUs() {
   const contactFormRef = useRef(null);
   const dialogueRef = useRef(null);
 
+  const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSent, setIsSent] = useState(false);
   const [formData, setFormData] = useState({
@@ -198,7 +200,7 @@ export default function ContactUs() {
         category: 'contact us'
       };
 
-      const response = await axios.post('http://localhost:5000/api/messages', payload, {
+      const response = await axios.post(`${API_BASE_URL}/messages`, payload, {
         headers: { 'Content-Type': 'application/json' }
       });
 

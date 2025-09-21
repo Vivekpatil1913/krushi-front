@@ -89,7 +89,7 @@ const ConsultancyBanner = () => {
     const getServerImageUrl = (imagePath) => {
       if (!imagePath) return '';
       
-      const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+      const baseUrl = process.env.API_URL || 'http://localhost:5000';
       return imagePath.startsWith('http') ? imagePath : `${baseUrl}${imagePath}`;
     }
 

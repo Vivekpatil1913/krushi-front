@@ -2,7 +2,9 @@
 import React, { useState, useEffect } from 'react'
 import './VideoSection.css'
 
-const API_UPDATES_URL = "http://localhost:5000/api/updates"
+// const API_UPDATES_URL = "http://localhost:5000/api/updates"
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api/updates';
+const API_UPDATES_URL = `${API_BASE_URL}/updates`;
 
 const VideoSection = () => {
   const [activeVideo, setActiveVideo] = useState(0)

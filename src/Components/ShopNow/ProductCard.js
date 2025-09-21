@@ -10,7 +10,8 @@ import {
 import './ProductCard.css';
 import CheckoutFlow from './CheckoutFlow';
 
-const backendRootURL = 'http://localhost:5000';
+// const backendRootURL = 'http://localhost:5000';
+const backendRootURL = process.env.API_URL || 'http://localhost:5000';
 
 const ProductCard = ({
   product,

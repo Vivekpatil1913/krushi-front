@@ -33,7 +33,8 @@ import ProductCard from './ProductCard';
 import './ProductDetails.css';
 import CheckoutFlow from './CheckoutFlow';
 
-const backendRootURL = "http://localhost:5000"; // Adjust if needed
+// const backendRootURL = "http://localhost:5000"; // Adjust if needed
+const backendRootURL = process.env.API_URL || 'http://localhost:5000';
 
 const ProductDetails = ({
   product,

@@ -9,7 +9,8 @@ import Logo from '../Assets/Images/Krushiwishwa .png';
 import FacebookLogo from '../Assets/Images/facebook.png';
 import GoogleLogo from '../Assets/Images/google.png';
 
-const API = "http://localhost:5000/api/auth";
+// const API = "http://localhost:5000/api/auth";
+const API = "https://krushi-backend-7l03.onrender.com/api/auth";
 
 const LoginSignup = () => {
   useAOS();

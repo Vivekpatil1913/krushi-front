@@ -18,7 +18,8 @@ import "./CheckoutFlow.css";
 import TruckAnimation from "./TruckAnimation";
 import QRCode from "./Assets/QRCode.png";
 
-const backendRootURL = "http://localhost:5000";
+// const backendRootURL = "http://localhost:5000";
+const backendRootURL = process.env.API_URL || 'http://localhost:5000';
 
 const CheckoutFlow = ({
 product,

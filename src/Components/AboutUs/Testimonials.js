@@ -20,6 +20,8 @@ const CARD_FAINTS = [
   "rgba(138,122,230,0.11)",
 ];
 
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+
 const Testimonials = () => {
   const marqueeRef = useRef(null);
   const [testimonials, setTestimonials] = useState([]);
@@ -29,7 +31,7 @@ const Testimonials = () => {
   useEffect(() => {
     async function fetchTestimonials() {
       try {
-        const { data } = await axios.get("http://localhost:5000/api/testimonials");
+        const { data } = await axios.get(`${API_BASE_URL}/api/testimonials`);
         setTestimonials(data);
       } catch {
         setTestimonials([]);

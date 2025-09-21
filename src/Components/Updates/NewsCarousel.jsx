@@ -5,7 +5,9 @@ import { FaChevronLeft, FaChevronRight, FaHeart, FaRegHeart, FaCalendarAlt } fro
 import { FiTrendingUp } from "react-icons/fi"
 import "./NewsCarousel.css"
 
-const API_UPDATES_URL = "http://localhost:5000/api/updates"
+// const API_UPDATES_URL = "http://localhost:5000/api/updates"
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api/updates';
+const API_UPDATES_URL = `${API_BASE_URL}/updates`;
 
 const NewsCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -27,7 +29,7 @@ const NewsCarousel = () => {
         const formattedStories = data.map(story => ({
           ...story,
           id: story._id,
-          image: story.image.startsWith('http') ? story.image : `http://localhost:5000${story.image}`
+          image: story.image.startsWith('http') ? story.image : `${API_BASE_URL}${story.image}`
         }))
 
         setFeaturedStories(formattedStories)

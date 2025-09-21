@@ -5,7 +5,9 @@ import { FaEnvelope, FaPaperPlane, FaLeaf, FaSeedling, FaTractor, FaCalendarAlt,
 import { RiPlantFill } from "react-icons/ri"
 import "./NewsletterCTA.css"
 
-const API_UPDATES_URL = "http://localhost:5000/api/updates"
+// const API_UPDATES_URL = "http://localhost:5000/api/updates"
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api/updates';
+const API_UPDATES_URL = `${API_BASE_URL}/updates`;
 
 const NewsletterCTA = ({ contact, setContact, onSubscribe }) => {
   const [isSubmitting, setIsSubmitting] = useState(false)

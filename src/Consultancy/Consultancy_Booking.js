@@ -23,6 +23,8 @@ export default function ConsultancyBooking() {
   const [focused, setFocused] = useState(null);
   const [serverError, setServerError] = useState("");
 
+  const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+
   // Regex patterns for validation
   const namePattern = /^[A-Za-z\s]+$/; // Only letters and spaces allowed
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;  // Simple email validation
@@ -139,7 +141,7 @@ export default function ConsultancyBooking() {
         description: formData.description.trim(),
       };
 
-      const response = await axios.post("http://localhost:5000/api/appointments", payload);
+      const response = await axios.post(`${API_BASE_URL}/appointments`, payload);
 
       if (response.status === 201) {
         setShowNotice(true);

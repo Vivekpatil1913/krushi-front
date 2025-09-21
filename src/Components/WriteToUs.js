@@ -160,7 +160,7 @@ export default function WriteToUs() {
                 };
                 
                 const response = await axios.post(
-                    "http://localhost:5000/api/messages",
+                    `${API_BASE_URL}/api/messages`,
                     payload,
                     { headers: { "Content-Type": "application/json" } }
                 );

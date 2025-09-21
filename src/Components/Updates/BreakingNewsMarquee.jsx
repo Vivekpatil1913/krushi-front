@@ -3,7 +3,9 @@ import { FaBolt, FaFire, FaStar, FaTint, FaRobot, FaSeedling } from "react-icons
 import { useEffect, useRef, useState } from "react"
 import "./BreakingNewsMarquee.css"
 
-const API_UPDATES_URL = "http://localhost:5000/api/updates"
+// const API_UPDATES_URL = "http://localhost:5000/api/updates"
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api/updates';
+const API_UPDATES_URL = `${API_BASE_URL}/updates`;
 
 const BreakingNewsMarquee = () => {
   const [isHovered, setIsHovered] = useState(false)
