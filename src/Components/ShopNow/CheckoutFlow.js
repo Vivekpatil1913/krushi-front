@@ -19,7 +19,7 @@ import TruckAnimation from "./TruckAnimation";
 import QRCode from "./Assets/QRCode.png";
 
 // const backendRootURL = "http://localhost:5000";
-const backendRootURL = process.env.API_URL || 'http://localhost:5000';
+const backendRootURL = process.env.REACT_APP_BASE_URL || 'http://localhost:5000';
 
 const CheckoutFlow = ({
 product,

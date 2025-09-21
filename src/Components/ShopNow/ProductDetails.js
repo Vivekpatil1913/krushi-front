@@ -34,7 +34,7 @@ import './ProductDetails.css';
 import CheckoutFlow from './CheckoutFlow';
 
 // const backendRootURL = "http://localhost:5000"; // Adjust if needed
-const backendRootURL = process.env.API_URL || 'http://localhost:5000';
+const backendRootURL = process.env.REACT_APP_BASE_URL || 'http://localhost:5000';
 
 const ProductDetails = ({
   product,

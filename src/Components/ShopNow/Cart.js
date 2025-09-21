@@ -8,7 +8,7 @@ import CheckoutFlow from './CheckoutFlow';
 import './Cart.css';
 
 // const backendRootURL = "http://localhost:5000";
-const backendRootURL = process.env.API_URL || 'http://localhost:5000';
+const backendRootURL = process.env.REACT_APP_BASE_URL || 'http://localhost:5000';
 
 const Cart = ({
   items,

@@ -6,7 +6,7 @@ import './Gallery.css';
 import GalleryBanner from "../Components/GalleryBanner.jsx"
  
 // const BACKEND_URL = "http://localhost:5000";
-const BACKEND_URL = process.env.API_URL || 'http://localhost:5000';
+const BACKEND_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:5000';
 const API_URL = BACKEND_URL + "/api";
 
 const Icons = {

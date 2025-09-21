@@ -7,7 +7,7 @@ import "./TimelineCarousel.css"
 
 // === Declare all path constants ===
 // const API_BASE_URL = "http://localhost:5000"
-const API_BASE_URL = process.env.API_URL || 'http://localhost:5000';
+const API_BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:5000';
 const API_TIMELINE_URL = `${API_BASE_URL}/api/timeline`
 const UPLOADS_BASE_PATH = `${API_BASE_URL}/uploads/TimelineCarousel/`
 const PLACEHOLDER_IMAGE = "/placeholder.svg"
